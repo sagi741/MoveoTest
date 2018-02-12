@@ -1,0 +1,32 @@
+//Created by sagifridman on 07/02/2018.
+
+html
+    head
+        script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+
+        script
+            include ../index.js
+    body(class="")
+        .row
+            .col-md-6.col-md-offset-3
+                div
+                    each city in cities
+                        p Location: #{city.location}
+                        p Temp: #{city.temp}
+                        p  #{city.humidity}
+                        p windspeed: #{city.windspeed}
+                        - var iconUrl = city.weatherIconUrl
+                        img(src=iconUrl)
+
+    div
+        block content
+            .main.container
+                .row
+                    .col-md-6.col-md-offset-3
+                        h1.display-4.m-b-2 search for more cities:
+                        form
+                            div.form-group
+                                label(for='search') Search city:
+                                input.form-control(type='text' id='searchCity' placeholder='search city' name='searchCity')
+                            div.form-group
+                            button.btn.btn-primary(type='button' id="searchBtn") search button
