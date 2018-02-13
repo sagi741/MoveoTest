@@ -14,7 +14,7 @@ $(document).ready(function() {
         var s= $("#searchCity").val();
         $.post('/search', {query: s}, function (response) {
             console.log(response);
-            $('body').append('<div>'+response.location+'</div>' + '<div>'+response.temp+'</div>' + '<div>'+response.humidity+'</div>' + '<div>'+response.windspeed+'</div>' + '<div>'+response.weatherIconUrl+'</div>')
+            $('body').append('<div>'+response.location+'</div>' + '<div>'+response.temp+'</div>' + '<div>'+response.humidity+'</div>' + '<div>'+response.windspeed+'</div>')
         });
         console.log( "button clicked.... "+ s );
 
