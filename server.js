@@ -2,12 +2,12 @@
  * Created by sagifridman on 07/02/2018.
  */
 
-const express = require('express');
+const express = require('express'); //
 const app = express();
-const cheerio = require('cheerio');
-const request = require('request');
+const cheerio = require('cheerio'); //
+const request = require('request'); //
 const path = require('path');
-const bodyParser = require('body-parser');
+const bodyParser = require('body-parser'); //
 
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"));
